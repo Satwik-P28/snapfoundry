@@ -12,17 +12,51 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const siteUrl = 'https://snapfoundry.nex3sss.chatgpt.site';
+
 export const metadata: Metadata = {
-  title: 'SnapFoundry — Listing photos, forged in batches',
+  title: 'SnapFoundry — Open-source batch product photos, no uploads',
   description:
-    'A private batch product-photo workshop for marketplace sellers.',
-  metadataBase: new URL('https://snapfoundry.nex3sss.chatgpt.site'),
+    'Free private product-photo workshop and PhotoRoom alternative. Remove light backgrounds in the browser, apply marketplace recipes, export a ZIP with a manifest.',
+  keywords: [
+    'open source photoroom alternative',
+    'batch background removal',
+    'marketplace product photos',
+    'local image processing',
+    'etsy listing photos',
+  ],
+  authors: [{ name: 'SnapFoundry contributors' }],
+  category: 'photography',
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: siteUrl },
   openGraph: {
-    title: 'SnapFoundry',
-    description: 'Listing photos, forged in batches.',
+    type: 'website',
+    url: siteUrl,
+    title: 'SnapFoundry — Listing photos, forged in batches',
+    description: 'Private in-browser batch product-photo workshop. No accounts or uploads.',
     images: ['/og.png'],
   },
-  twitter: { card: 'summary_large_image', images: ['/og.png'] },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SnapFoundry — Listing photos, forged in batches',
+    description: 'Private in-browser batch product-photo workshop. No accounts or uploads.',
+    images: ['/og.png'],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'SnapFoundry',
+  applicationCategory: 'MultimediaApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  description:
+    'Private browser-based batch product-photo workshop for marketplace sellers.',
+  url: siteUrl,
+  downloadUrl: 'https://github.com/Satwik-P28/snapfoundry',
+  license: 'https://opensource.org/licenses/MIT',
+  isAccessibleForFree: true,
 };
 
 export default function RootLayout({
@@ -35,6 +69,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
