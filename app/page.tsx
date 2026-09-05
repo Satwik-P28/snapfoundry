@@ -5,7 +5,6 @@ import Image from 'next/image';
 import {
   Check,
   Download,
-  Github,
   Images,
   LayoutGrid,
   Loader2,
@@ -13,6 +12,7 @@ import {
   RefreshCcw,
   ShieldCheck,
   SlidersHorizontal,
+  Star,
   Upload,
   WandSparkles,
   X,
@@ -235,7 +235,7 @@ export default function Home() {
               />
             }
           >
-            <Github data-icon="inline-start" /> Star
+            <Star data-icon="inline-start" /> Star
           </Button>
           <Input
             ref={fileRef}
