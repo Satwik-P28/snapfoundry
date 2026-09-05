@@ -5,6 +5,7 @@ import Image from 'next/image';
 import {
   Check,
   Download,
+  Github,
   Images,
   LayoutGrid,
   Loader2,
@@ -222,6 +223,20 @@ export default function Home() {
           <Badge variant="outline" className="ml-auto hidden sm:flex">
             <ShieldCheck data-icon="inline-start" /> Local workshop
           </Badge>
+          <Button
+            variant="outline"
+            nativeButton={false}
+            render={
+              <a
+                href="https://github.com/Satwik-P28/snapfoundry"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Star SnapFoundry on GitHub"
+              />
+            }
+          >
+            <Github data-icon="inline-start" /> Star
+          </Button>
           <Input
             ref={fileRef}
             type="file"

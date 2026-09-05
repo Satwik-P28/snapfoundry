@@ -2,6 +2,24 @@
   "name": "snapfoundry",
   "version": "0.1.0",
   "private": true,
+  "description": "Private in-browser batch product-photo workshop for marketplace sellers.",
+  "license": "MIT",
+  "homepage": "https://snapfoundry.nex3sss.chatgpt.site",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Satwik-P28/snapfoundry.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Satwik-P28/snapfoundry/issues"
+  },
+  "keywords": [
+    "product-photography",
+    "photoroom-alternative",
+    "background-removal",
+    "marketplace",
+    "local-first",
+    "open-source"
+  ],
   "engines": {
     "node": ">=22.13.0"
   },
